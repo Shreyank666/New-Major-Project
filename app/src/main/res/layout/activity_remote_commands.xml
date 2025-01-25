@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btnLockDevice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lock Device" />
+
+    <Button
+        android:id="@+id/btnWipeData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Wipe Data" />
+
+    <Button
+        android:id="@+id/btnTriggerAlarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trigger Alarm" />
+</LinearLayout> 

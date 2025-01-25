@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Profile Section -->
+    <LinearLayout
+        android:id="@+id/profileSection"
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="#F5F5F5"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- User Info -->
+        <LinearLayout
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUserEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnChangePassword"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Change Password" />
+
+            <Button
+                android:id="@+id/btnSignOut"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign Out" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Existing Dashboard Buttons -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp"
+        android:text="Dashboard"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="34sp" />
+
+    <Button
+        android:id="@+id/btnFindMyPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find My Phone" />
+
+    <Button
+        android:id="@+id/btnRemoteCommands"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remote Commands" />
+
+    <Button
+        android:id="@+id/btnSecurityAlerts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Security Alerts" />
+</LinearLayout>

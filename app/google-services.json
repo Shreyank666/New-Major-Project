@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "364761963296",
+    "project_id": "antitheft-project",
+    "storage_bucket": "antitheft-project.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364761963296:android:b96b0133defe94f9475545",
+        "android_client_info": {
+          "package_name": "com.cscf.antitheftproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd5-DyNzk1_zy2wZJlRAuVc5S51ZDAaWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
