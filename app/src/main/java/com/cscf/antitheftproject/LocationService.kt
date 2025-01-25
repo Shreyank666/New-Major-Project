@@ -48,16 +48,25 @@ class LocationService : Service() {
     private fun uploadLocationToFirebase(location: Location) {
         val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
         val database = FirebaseDatabase.getInstance()
-        val locationRef = database.getReference("locations").child(userId)
-
+        
+        // Update current location
+        val currentLocationRef = database.getReference("locations").child(userId).child("current")
+        val locationHistoryRef = database.getReference("locations").child(userId).child("history")
+        
+        val timestamp = System.currentTimeMillis()
         val locationData = hashMapOf(
             "latitude" to location.latitude,
             "longitude" to location.longitude,
-            "timestamp" to System.currentTimeMillis(),
+            "timestamp" to timestamp,
             "accuracy" to location.accuracy
         )
 
-        locationRef.setValue(locationData)
+        // Update current location
+        currentLocationRef.setValue(locationData)
+        
+        // Add to location history
+        val historyEntry = locationHistoryRef.push()
+        historyEntry.setValue(locationData)
     }
 
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {

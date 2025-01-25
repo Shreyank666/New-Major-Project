@@ -35,6 +35,10 @@
         <activity
             android:name=".LocationTrackingActivity"
             android:exported="false" />
+            
+        <activity
+            android:name=".LocationHistoryActivity"
+            android:exported="false" />
 
         <service
             android:name=".LocationService"

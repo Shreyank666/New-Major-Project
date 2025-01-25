@@ -59,7 +59,9 @@ class LocationTrackingActivity : AppCompatActivity() {
 
     private fun setupLocationTracking() {
         val userId = FirebaseAuth.getInstance().currentUser?.uid ?: return
-        val locationRef = FirebaseDatabase.getInstance().getReference("locations").child(userId)
+        val locationRef = FirebaseDatabase.getInstance().getReference("locations")
+            .child(userId)
+            .child("current")
 
         locationRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -96,6 +98,10 @@ class LocationTrackingActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnStopTracking).setOnClickListener {
             stopLocationService()
             finish()
+        }
+
+        findViewById<Button>(R.id.btnViewHistory).setOnClickListener {
+            startActivity(Intent(this, LocationHistoryActivity::class.java))
         }
     }
 
